@@ -64,7 +64,8 @@ namespace MicroService.ApiGateway
             var configuration = context.Services.GetConfiguration();
 
             Log.Logger = new LoggerConfiguration()
-               .ReadFrom.Configuration(configuration)
+               // .ReadFrom.Configuration(configuration)
+               .WriteTo.Console()
                .CreateLogger();
 
             Configure<AbpClockOptions>(options =>
@@ -181,7 +182,7 @@ namespace MicroService.ApiGateway
         {
             Configure<AbpDbContextOptions>(options =>
             {
-                options.UseSqlServer();
+                options.UseMySQL();
             });
         }
 

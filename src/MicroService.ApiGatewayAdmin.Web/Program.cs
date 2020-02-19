@@ -2,6 +2,7 @@
 using Serilog;
 using System;
 using System.IO;
+using Microsoft.Extensions.Hosting;
 
 namespace MicroService.ApiGateway
 {
@@ -28,13 +29,16 @@ namespace MicroService.ApiGateway
             }
         }
 
-        public static IWebHost BuildWebHostInternal(string[] args) =>
-            new WebHostBuilder()
-                .UseUrls("http://*:8080")
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .UseSerilog()
+        public static IHost BuildWebHostInternal(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(configure =>
+                {
+                    configure.UseUrls("http://*:8080")
+                        .UseKestrel()
+                        .UseContentRoot(Directory.GetCurrentDirectory())
+                        .UseStartup<Startup>()
+                        .UseSerilog();
+                })
                 .Build();
     }
 }

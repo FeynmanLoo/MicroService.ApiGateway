@@ -12,7 +12,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ExtraProperties = table.Column<string>(nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     ReRouteId = table.Column<long>(nullable: false),
@@ -33,7 +33,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ExtraProperties = table.Column<string>(nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     DynamicReRouteId = table.Column<long>(nullable: false),
@@ -50,7 +50,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ExtraProperties = table.Column<string>(nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     ItemId = table.Column<long>(nullable: false),
@@ -71,7 +71,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: false),
                     Key = table.Column<string>(maxLength: 50, nullable: true),
                     Value = table.Column<string>(maxLength: 256, nullable: true)
@@ -86,7 +86,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: false),
                     Host = table.Column<string>(maxLength: 50, nullable: false),
                     Port = table.Column<int>(nullable: true, defaultValue: 0)
@@ -101,7 +101,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ExtraProperties = table.Column<string>(nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     ReRouteId = table.Column<long>(nullable: false),
@@ -138,7 +138,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ServerId = table.Column<long>(nullable: false),
                     ApiAddress = table.Column<string>(maxLength: 100, nullable: false),
                     ClientId = table.Column<string>(maxLength: 50, nullable: false),
@@ -156,7 +156,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: false),
                     ReRouteKey = table.Column<string>(maxLength: 256, nullable: true),
                     Parameter = table.Column<string>(maxLength: 1000, nullable: true),
@@ -179,7 +179,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ItemId = table.Column<long>(nullable: false),
                     Host = table.Column<string>(maxLength: 50, nullable: true),
                     Port = table.Column<int>(nullable: true),
@@ -205,7 +205,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ItemId = table.Column<long>(nullable: false),
                     ClientIdHeader = table.Column<string>(maxLength: 50, nullable: true, defaultValue: "ClientId"),
                     QuotaExceededMessage = table.Column<string>(maxLength: 256, nullable: true),
@@ -229,7 +229,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: false),
                     AuthenticationProviderKey = table.Column<string>(maxLength: 100, nullable: true),
                     AllowedScopes = table.Column<string>(maxLength: 200, nullable: true)
@@ -250,7 +250,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ItemId = table.Column<long>(nullable: true),
                     ReRouteId = table.Column<long>(nullable: true),
                     Type = table.Column<string>(maxLength: 100, nullable: true),
@@ -279,7 +279,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: false),
                     TtlSeconds = table.Column<int>(nullable: true),
                     Region = table.Column<string>(maxLength: 256, nullable: true)
@@ -300,7 +300,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ItemId = table.Column<long>(nullable: true),
                     ReRouteId = table.Column<long>(nullable: true),
                     AllowAutoRedirect = table.Column<bool>(nullable: false),
@@ -330,7 +330,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ItemId = table.Column<long>(nullable: true),
                     ReRouteId = table.Column<long>(nullable: true),
                     ExceptionsAllowedBeforeBreaking = table.Column<int>(nullable: true),
@@ -359,7 +359,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: true),
                     DynamicReRouteId = table.Column<long>(nullable: true),
                     ClientWhitelist = table.Column<string>(maxLength: 1000, nullable: true),
@@ -390,7 +390,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ReRouteId = table.Column<long>(nullable: false),
                     IPAllowedList = table.Column<string>(maxLength: 1000, nullable: true),
                     IPBlockedList = table.Column<string>(maxLength: 1000, nullable: true)
@@ -411,7 +411,7 @@ namespace MicroService.ApiGatewayAdmin.Web.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ExtraProperties = table.Column<string>(nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     ServerId = table.Column<long>(nullable: false),
